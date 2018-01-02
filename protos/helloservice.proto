@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package fastdata;
+
+option java_package = "de.traffics.fastdata.proto";
+option java_outer_classname = "HelloServiceProtos";
+
+service HelloService {
+    rpc SayHello(HelloRequest) returns (HelloResponse);
+}
+
+message HelloRequest{
+    string greeting = 1;
+}
+
+message HelloResponse{
+    string reply = 1;
+}
